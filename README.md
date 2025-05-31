@@ -1,4 +1,4 @@
-# 🎵 Na Vasu - Music Producer Portfolio
+# 🎵 Na Vasu - Music Producer Portfolio - With multiple music player cards
 
 Welcome to the official portfolio website of **Na Vasu**, a passionate music producer. This site showcases my original tracks with an integrated music player and clean, responsive design — built using **HTML**, **CSS**, and **JavaScript**.
 
