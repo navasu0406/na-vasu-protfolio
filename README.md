@@ -17,10 +17,7 @@ Welcome to the official portfolio website of **Na Vasu**, a passionate music pro
 ## 🔗 Live Demo
 
 Check out the live version here:  
-[https://your-username.github.io/na-vasu-music-portfolio/](https://your-username.github.io/na-vasu-music-portfolio/)  
-*(Replace with your actual GitHub Pages link)*
-
----
+https://navasu0406.github.io/na-vasu-protfolio/
 
 ## 📁 Project Structure
 
