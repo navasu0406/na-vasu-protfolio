@@ -446,7 +446,7 @@
 
   </div>
 
-  <!-- CONTACT -->
+    <!-- CONTACT -->
   <div class="contact" id="contact">
 
     <a href="https://www.youtube.com/@navasu04"
@@ -473,24 +473,54 @@
         height="50" />
 
     </a>
-    
-    <div class="cursor-glow"></div>
 
-<script>
+  </div>
 
-const glow = document.querySelector('.cursor-glow');
+  <!-- CURSOR GLOW -->
+  <div class="cursor-glow"></div>
 
-document.addEventListener('mousemove',(e)=>{
+  <!-- CURSOR EFFECT -->
+  <script>
 
-  glow.style.left = e.clientX + 'px';
-  glow.style.top = e.clientY + 'px';
+    const glow = document.querySelector('.cursor-glow');
 
-});
+    document.addEventListener('mousemove', (e) => {
 
-</script>
+      glow.style.left = e.clientX + 'px';
+      glow.style.top = e.clientY + 'px';
 
+    });
 
+  </script>
 
+  <!-- HIDE NAVBAR ON SCROLL -->
+  <script>
+
+    let lastScroll = 0;
+
+    const navbar = document.querySelector('.nav');
+
+    window.addEventListener('scroll', () => {
+
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll) {
+
+        navbar.style.transform = 'translateY(-120%)';
+
+      } else {
+
+        navbar.style.transform = 'translateY(0)';
+
+      }
+
+      lastScroll = currentScroll;
+
+    });
+
+  </script>
+
+  <!-- MUSIC PLAYER -->
   <script src="music-player.js"></script>
 
 </body>
