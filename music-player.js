@@ -59,3 +59,8 @@ cards.forEach(card => {
 });
 
 
+cards.forEach(card => {
+  card.classList.remove('active');
+});
+
+card.classList.add('active');
