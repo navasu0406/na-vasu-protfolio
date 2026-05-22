@@ -1,439 +1,523 @@
-/* Reset & Global */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* =========================
+   RESET & GLOBAL
+========================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-family: Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.4;
+html{
+  scroll-behavior:smooth;
+  font-family:'Poppins',sans-serif;
 }
 
-/* Sticky Navigation */
-.nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 40px;
-  position: sticky;
-  top: 0;
-  background-color: #fff;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+body{
+  background:#ffffff;
+  color:#000;
+  overflow-x:hidden;
 }
 
-.logo {
-  width: 50px;
-  height: auto;
-  transition: transform 0.3s ease;
+/* =========================
+   NAVBAR
+========================= */
+
+.nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:18px 50px;
+
+  position:sticky;
+  top:0;
+
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(14px);
+
+  z-index:1000;
+
+  border-bottom:1px solid rgba(0,0,0,0.06);
+
+  box-shadow:0 4px 20px rgba(0,0,0,0.04);
 }
 
-.logo:hover {
-  transform: scale(1.1);
+.logo{
+  width:55px;
+  transition:0.3s ease;
 }
 
-.nav ul {
-  display: flex;
-  list-style: none;
-  gap: 20px;
+.logo:hover{
+  transform:scale(1.08);
 }
 
-.nav a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 600;
-  font-size: 1.25rem;
+.nav ul{
+  display:flex;
+  gap:30px;
+  list-style:none;
 }
 
-.nav ul a:hover {
-  text-decoration: underline;
+.nav a{
+  text-decoration:none;
+  color:#111;
+  font-weight:600;
+  font-size:1rem;
+
+  position:relative;
 }
 
-/* Name / Welcome Section */
-.name {
-  display: flex;
-  justify-content: center;
-  padding-top: 40px;
-  font-size: 2rem;
-  font-weight: bold;
-  scroll-margin-top: 80px;
+.nav a::after{
+  content:'';
+
+  position:absolute;
+
+  left:0;
+  bottom:-6px;
+
+  width:0%;
+  height:2px;
+
+  background:#000;
+
+  transition:0.3s ease;
 }
 
-/* Profile Image */
-.profile {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 50%;
-  display: block;
-  margin: auto;
+.nav a:hover::after{
+  width:100%;
 }
 
-/* About Section */
-.about {
-  display: flex;
-  flex-direction: column;
-  padding: 10px;
-  margin-left: 200px;
-  margin-right: 200px;
+/* =========================
+   HERO SECTION
+========================= */
+
+.name{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding-top:70px;
 }
 
-.about p {
-  font-size: 1.25rem;
-  line-height: 1.6;
-  color: rgb(0, 0, 0);
+.name h1{
+  font-size:5rem;
+  letter-spacing:3px;
+
+  color:#111;
+
+  animation:fadeUp 0.8s ease;
 }
 
-/* Works Section Container */
-.works {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 20px 40px;
-  scroll-snap-type: x mandatory;
-  margin-left: 200px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+/* =========================
+   PROFILE
+========================= */
+
+.pics{
+  margin-top:25px;
 }
 
-.works::-webkit-scrollbar {
-  display: none;
+.profile{
+  width:260px;
+  height:260px;
+
+  object-fit:cover;
+  border-radius:50%;
+
+  display:block;
+  margin:auto;
+
+  box-shadow:
+  0 15px 35px rgba(0,0,0,0.15);
+
+  transition:0.4s ease;
 }
 
-/* Individual Video Card */
-.work-item {
-  flex: 0 0 auto;
-  width: 300px;
-  scroll-snap-align: start;
-  background: #111;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.profile:hover{
+  transform:scale(1.03);
 }
 
-.work-item:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+/* =========================
+   HEADINGS
+========================= */
+
+.worksh1,
+.about h1{
+  width:min(1200px,90%);
+  margin:auto;
+
+  margin-top:70px;
+  margin-bottom:25px;
+
+  font-size:2.5rem;
+  color:#111;
 }
 
-.work-item img {
-  width: 100%;
-  height: auto;
-  display: block;
+/* =========================
+   ABOUT
+========================= */
+
+.about{
+  width:min(1200px,90%);
+  margin:auto;
 }
 
-.work-item p {
-  padding: 10px;
-  color: #fff;
-  font-size: 1rem;
-  text-align: center;
-  background-color: #222;
+.about p{
+  font-size:1.15rem;
+  line-height:1.9;
+  color:#444;
 }
 
-/* My Works Heading */
-.worksh1 {
-  margin-left: 210px;
-  margin-top: 40px;
-  font-size: 2rem;
+/* =========================
+   MUSIC GALLERY
+========================= */
+
+.music-gallery{
+  width:min(1200px,90%);
+  margin:auto;
+
+  display:flex;
+  gap:25px;
+
+  overflow-x:auto;
+
+  padding:25px 0;
+
+  scrollbar-width:none;
 }
 
-/* Scroll Offset for Sticky Nav */
-#home, #works, #contact {
-  scroll-margin-top: 100px;
+.music-gallery::-webkit-scrollbar{
+  display:none;
 }
 
-/* Contact Section */
-.contact {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 40px 20px;
-  background-color: #f9f9f9;
-  flex-wrap: wrap;
+/* =========================
+   MUSIC CARD
+========================= */
+
+.music-card{
+  flex:0 0 auto;
+
+  width:300px;
+
+  background:#fff;
+
+  border-radius:22px;
+
+  padding:18px;
+
+  border:1px solid rgba(0,0,0,0.06);
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.06);
+
+  transition:0.35s ease;
+
+  animation:fadeUp 0.8s ease;
 }
 
-.contact a {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  color: #000;
-  font-weight: 600;
-  font-size: 1.2rem;
-  gap: 10px;
-  transition: color 0.3s ease;
+.music-card:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 18px 40px rgba(0,0,0,0.12);
 }
 
-.contact a:hover {
-  color: #0077ff;
+.album-art{
+  width:100%;
+  height:380px;
+
+  object-fit:cover;
+
+  border-radius:18px;
+
+  margin-bottom:18px;
+
+  transition:0.4s ease;
 }
 
-.contact a img {
-  display: block;
-  width: 50px;
-  height: 50px;
-  object-fit: contain;
-  transition: transform 0.3s ease;
+.music-card:hover .album-art{
+  transform:scale(1.03);
 }
 
-.contact a:hover img {
-  transform: scale(1.1);
+/* =========================
+   CONTROLS
+========================= */
+
+.controls{
+  margin-top:10px;
 }
 
-.contact .gmail {
-  font-size: 1rem;
-  padding-left: 10px;
-  color: #333;
-  align-self: center;
+.play-button{
+  width:60px;
+  height:60px;
+
+  margin:15px auto;
+
+  border-radius:50%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#000;
+
+  cursor:pointer;
+
+  transition:0.3s ease;
 }
 
-/* Music Gallery Section */
-.music-gallery {
-  display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 20px 40px;
-  scroll-snap-type: x mandatory;
-  margin-left: 200px;
-  margin-right: 200px;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+.play-button:hover{
+  transform:scale(1.1);
 }
 
-.music-gallery::-webkit-scrollbar {
-  display: none;
+.play-button i{
+  font-size:28px;
+  color:#fff;
 }
 
-.music-card {
-  flex: 0 0 auto;
-  width: 300px;
-  scroll-snap-align: start;
-  background-color: #f0f0f0;
-  border-radius: 10px;
-  padding: 16px;
-  text-align: center;
-  position: relative;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.current-time,
+.duration{
+  font-size:0.85rem;
+  color:#666;
 }
 
-.music-card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+/* =========================
+   SEEK BAR
+========================= */
+
+.seek-bar{
+  width:100%;
+
+  margin:12px 0;
+
+  appearance:none;
+
+  height:5px;
+
+  background:#ddd;
+
+  border-radius:10px;
 }
 
-.album-art {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  margin-bottom: 12px;
-  display: block;
+.seek-bar::-webkit-slider-thumb{
+  appearance:none;
+
+  width:14px;
+  height:14px;
+
+  border-radius:50%;
+
+  background:#000;
+
+  cursor:pointer;
 }
 
-.play-button {
-  width: 50px;
-  height: 50px;
-  background-color: #ffffff;
-  color: #000000;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 12px;
-  cursor: pointer;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  transition: transform 0.2s ease;
+/* =========================
+   INFO
+========================= */
+
+.info h3{
+  margin-top:10px;
+  font-size:1.1rem;
+  color:#111;
 }
 
-.play-button:hover {
-  transform: scale(1.1);
+.info p{
+  margin-top:5px;
+  color:#666;
 }
 
-.play-button i {
-  font-size: 24px;
-  color: #000000;
+/* =========================
+   WORKS SECTION
+========================= */
+
+.works{
+  width:min(1200px,90%);
+  margin:auto;
+
+  display:flex;
+  gap:25px;
+
+  overflow-x:auto;
+
+  padding-bottom:20px;
+
+  scrollbar-width:none;
 }
 
-.music-card .info h3 {
-  margin: 6px 0 4px;
-  font-size: 16px;
+.works::-webkit-scrollbar{
+  display:none;
 }
 
-.music-card .info p {
-  font-size: 13px;
-  color: #666;
+.work-item{
+  flex:0 0 auto;
+
+  width:320px;
+
+  background:#fff;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  border:1px solid rgba(0,0,0,0.06);
+
+  box-shadow:
+  0 8px 25px rgba(0,0,0,0.06);
+
+  transition:0.35s ease;
+
+  animation:fadeUp 0.8s ease;
 }
 
-/* Custom Seek Bar Styling */
-input[type="range"].seek-bar {
-  appearance: none;
-  -webkit-appearance: none;
-  width: 100%;
-  height: 4px;
-  background: #ccc;
-  border-radius: 2px;
-  outline: none;
-  cursor: pointer;
+.work-item:hover{
+  transform:translateY(-10px);
+
+  box-shadow:
+  0 18px 40px rgba(0,0,0,0.12);
 }
 
-input[type="range"].seek-bar::-webkit-slider-runnable-track {
-  height: 4px;
-  background: #ccc;
-  border-radius: 2px;
+.work-item img{
+  width:100%;
+  display:block;
+
+  transition:0.4s ease;
 }
 
-input[type="range"].seek-bar::-moz-range-track {
-  height: 4px;
-  background: #ccc;
-  border-radius: 2px;
+.work-item:hover img{
+  transform:scale(1.03);
 }
 
-input[type="range"].seek-bar::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background: #000;
-  margin-top: -4px;
+.work-item p{
+  padding:15px;
+  text-align:center;
+
+  color:#333;
 }
 
-input[type="range"].seek-bar::-moz-range-thumb {
-  height: 12px;
-  width: 12px;
-  border-radius: 50%;
-  background: #000;
-  border: none;
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  margin-top:80px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+
+  gap:40px;
+
+  padding:40px 20px;
+
+  background:#fafafa;
+
+  border-top:1px solid rgba(0,0,0,0.06);
 }
 
-input[type="range"].seek-bar::-moz-focus-outer {
-  border: 0;
+.contact a{
+  text-decoration:none;
+  color:#111;
+
+  display:flex;
+  align-items:center;
+
+  gap:12px;
+
+  transition:0.3s ease;
 }
 
-#home, #music, #works, #contact {
-  scroll-margin-top: 250px;
+.contact a:hover{
+  transform:scale(1.05);
 }
 
-/* Responsive Breakpoints */
-@media (max-width: 1024px) {
-  .about, .works, .worksh1, .music-gallery {
-    margin-left: 100px;
-    margin-right: 100px;
+.contact img{
+  width:50px;
+  height:50px;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+
+@keyframes fadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(40px);
   }
 
-  .work-item,
-  .music-card {
-    width: 260px;
+  to{
+    opacity:1;
+    transform:translateY(0);
   }
 
-  .nav a {
-    font-size: 1.1rem;
-  }
 }
 
-@media (max-width: 768px) {
-  .about, .works, .worksh1, .music-gallery {
-    margin-left: 40px;
-    margin-right: 40px;
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+  .nav{
+    flex-direction:column;
+    gap:15px;
+
+    padding:20px;
   }
 
-  .nav {
-    flex-direction: column;
-    align-items: center; /* change to center if needed */
-    padding: 15px 20px;
+  .nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+
+    gap:18px;
   }
 
-  /* Removed nav ul flex-direction: column; to keep items horizontal */
-  .nav ul {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 100%;
-    gap: 10px;
+  .name h1{
+    font-size:3rem;
+    text-align:center;
   }
 
-  .nav ul li a {
-    font-size: 1rem;
+  .profile{
+    width:190px;
+    height:190px;
   }
 
-  .work-item,
-  .music-card {
-    width: 220px;
+  .music-card{
+    width:240px;
   }
 
-  .profile {
-    width: 200px;
-    height: 200px;
+  .album-art{
+    height:300px;
   }
 
-  .album-art {
-    height: auto;
-    max-height: 280px;
+  .work-item{
+    width:260px;
   }
 
-  .name {
-    font-size: 1.75rem;
-    padding-top: 120px;
-    scroll-margin-top: 120px;
-    margin-top: 15px;
-  }
 }
 
-@media (max-width: 480px) {
-  .about, .works, .worksh1, .music-gallery {
-    margin-left: 15px;
-    margin-right: 15px;
+@media(max-width:480px){
+
+  .name h1{
+    font-size:2.3rem;
   }
 
-  .nav {
-    padding: 10px 15px;
+  .music-card{
+    width:210px;
   }
 
-  .nav ul {
-    gap: 8px;
-    justify-content: center;
+  .album-art{
+    height:250px;
   }
 
-  .nav a {
-    font-size: 0.95rem;
+  .work-item{
+    width:220px;
   }
 
-  .work-item,
-  .music-card {
-    width: 180px;
+  .contact{
+    gap:20px;
   }
 
-  .profile {
-    width: 150px;
-    height: 150px;
-  }
-
-  .album-art {
-    height: auto;
-    max-height: 220px;
-  }
-
-  .name {
-    font-size: 1.5rem;
-    padding-top: 20px;
-    scroll-margin-top: 140px;
-    margin-top: 10px;
-  }
-
-  .contact {
-    gap: 25px;
-    padding: 20px 10px;
-  }
-
-  .contact a {
-    font-size: 1rem;
-  }
-
-  .contact a img {
-    width: 40px;
-    height: 40px;
-  }
 }
