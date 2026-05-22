@@ -455,69 +455,142 @@ body{
 }
 
 /* =========================
-   RESPONSIVE
+   MOBILE RESPONSIVE
 ========================= */
 
 @media(max-width:768px){
 
   .nav{
     flex-direction:column;
-    gap:15px;
-
-    padding:20px;
+    gap:10px;
+    padding:14px 18px;
   }
 
   .nav ul{
     flex-wrap:wrap;
     justify-content:center;
+    gap:14px;
+  }
 
-    gap:18px;
+  .nav a{
+    font-size:0.9rem;
+  }
+
+  .logo{
+    width:45px;
+  }
+
+  .name{
+    padding-top:40px;
   }
 
   .name h1{
-    font-size:3rem;
+    font-size:2.4rem;
     text-align:center;
   }
 
   .profile{
-    width:190px;
-    height:190px;
+    width:150px;
+    height:150px;
+  }
+
+  .worksh1,
+  .about h1{
+    font-size:2rem;
+    margin-top:50px;
+  }
+
+  .about p{
+    font-size:1rem;
+    line-height:1.7;
+  }
+
+  .music-gallery{
+    gap:18px;
   }
 
   .music-card{
-    width:240px;
-  }
-
-  .album-art{
-    height:300px;
-  }
-
-  .work-item{
-    width:260px;
-  }
-
-}
-
-@media(max-width:480px){
-
-  .name h1{
-    font-size:2.3rem;
-  }
-
-  .music-card{
-    width:210px;
-  }
-
-  .album-art{
-    height:250px;
-  }
-
-  .work-item{
     width:220px;
+    padding:14px;
+  }
+
+  .album-art{
+    height:260px;
+  }
+
+  .play-button{
+    width:50px;
+    height:50px;
+  }
+
+  .play-button i{
+    font-size:22px;
+  }
+
+  .work-item{
+    width:240px;
   }
 
   .contact{
     gap:20px;
+    padding:25px 10px;
   }
 
+  .contact img{
+    width:42px;
+    height:42px;
+  }
+
+}
+
+/* EXTRA SMALL PHONES */
+
+@media(max-width:480px){
+
+  .name h1{
+    font-size:2rem;
+  }
+
+  .profile{
+    width:130px;
+    height:130px;
+  }
+
+  .music-card{
+    width:190px;
+  }
+
+  .album-art{
+    height:220px;
+  }
+
+  .work-item{
+    width:210px;
+  }
+
+  .about p{
+    font-size:0.95rem;
+  }
+
+}
+.cursor-glow{
+
+  width:250px;
+  height:250px;
+
+  background:radial-gradient(
+    circle,
+    rgba(0,0,0,0.08),
+    transparent 70%
+  );
+
+  position:fixed;
+
+  pointer-events:none;
+
+  border-radius:50%;
+
+  transform:translate(-50%,-50%);
+
+  z-index:-1;
 }

@@ -408,6 +408,18 @@
     </div>
     <div class="work-item">
 
+      <a href="https://www.youtube.com/watch?v=n-eoWVJHZ1w"
+        target="_blank">
+
+        <img src="images/paramsi sturio.jpg" alt="Kill Code" />
+
+      </a>
+
+      <p>Banner Music along with sound design</p>
+
+    </div>
+    <div class="work-item">
+
       <a href="https://www.youtube.com/watch?v=cod2w3ShIBY&t=1s"
         target="_blank">
 
@@ -461,8 +473,23 @@
         height="50" />
 
     </a>
+    
+    <div class="cursor-glow"></div>
 
-  </div>
+<script>
+
+const glow = document.querySelector('.cursor-glow');
+
+document.addEventListener('mousemove',(e)=>{
+
+  glow.style.left = e.clientX + 'px';
+  glow.style.top = e.clientY + 'px';
+
+});
+
+</script>
+
+
 
   <script src="music-player.js"></script>
 
