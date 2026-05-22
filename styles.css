@@ -463,82 +463,104 @@ body{
   .nav{
     flex-direction:column;
     gap:10px;
-    padding:14px 18px;
+    padding:12px 16px;
   }
 
   .nav ul{
     flex-wrap:wrap;
     justify-content:center;
-    gap:14px;
+    gap:12px;
   }
 
   .nav a{
-    font-size:0.9rem;
+    font-size:0.85rem;
   }
 
   .logo{
-    width:45px;
+    width:42px;
   }
 
   .name{
-    padding-top:40px;
+    padding-top:30px;
   }
 
   .name h1{
-    font-size:2.4rem;
+    font-size:2.1rem;
     text-align:center;
   }
 
   .profile{
-    width:150px;
-    height:150px;
+    width:140px;
+    height:140px;
   }
 
   .worksh1,
   .about h1{
-    font-size:2rem;
-    margin-top:50px;
+    font-size:1.8rem;
+    margin-top:40px;
   }
 
   .about p{
-    font-size:1rem;
-    line-height:1.7;
+    font-size:0.95rem;
+    line-height:1.6;
   }
 
   .music-gallery{
-    gap:18px;
+    gap:14px;
+    padding:15px 0;
   }
 
   .music-card{
-    width:220px;
-    padding:14px;
+    width:170px;
+    padding:10px;
+    border-radius:16px;
   }
 
   .album-art{
-    height:260px;
+    height:170px;
+    border-radius:12px;
+    margin-bottom:10px;
   }
 
   .play-button{
-    width:50px;
-    height:50px;
+    width:42px;
+    height:42px;
+    margin:10px auto;
   }
 
   .play-button i{
-    font-size:22px;
+    font-size:18px;
+  }
+
+  .info h3{
+    font-size:0.9rem;
+  }
+
+  .info p{
+    font-size:0.75rem;
+  }
+
+  .current-time,
+  .duration{
+    font-size:0.7rem;
+  }
+
+  .seek-bar{
+    margin:8px 0;
   }
 
   .work-item{
-    width:240px;
+    width:210px;
   }
 
   .contact{
-    gap:20px;
-    padding:25px 10px;
+    gap:18px;
+    padding:20px 10px;
   }
 
   .contact img{
-    width:42px;
-    height:42px;
+    width:38px;
+    height:38px;
   }
 
 }
@@ -548,49 +570,28 @@ body{
 @media(max-width:480px){
 
   .name h1{
-    font-size:2rem;
+    font-size:1.8rem;
   }
 
   .profile{
-    width:130px;
-    height:130px;
+    width:120px;
+    height:120px;
   }
 
   .music-card{
-    width:190px;
+    width:155px;
   }
 
   .album-art{
-    height:220px;
+    height:150px;
   }
 
   .work-item{
-    width:210px;
+    width:190px;
   }
 
   .about p{
-    font-size:0.95rem;
+    font-size:0.9rem;
   }
 
-}
-.cursor-glow{
-
-  width:250px;
-  height:250px;
-
-  background:radial-gradient(
-    circle,
-    rgba(0,0,0,0.08),
-    transparent 70%
-  );
-
-  position:fixed;
-
-  pointer-events:none;
-
-  border-radius:50%;
-
-  transform:translate(-50%,-50%);
-
-  z-index:-1;
 }
