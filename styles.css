@@ -632,3 +632,324 @@ background 0.3s ease;
   border:1px solid rgba(0,0,0,0.15);
 
 }
+/* =========================
+SOCIAL LINKS
+========================= */
+
+/* =========================
+CONTACT
+========================= */
+
+.contact{
+    margin-top:80px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+
+    gap:35px;
+
+    padding:40px 20px;
+
+    background:#fafafa;
+
+    border-top:1px solid rgba(0,0,0,0.06);
+}
+
+.contact a{
+    text-decoration:none;
+    color:#111;
+
+    display:flex;
+    align-items:center;
+
+    gap:10px;
+
+    font-size:1rem;
+    font-weight:500;
+
+    position:relative;
+
+    transition:0.3s ease;
+}
+
+.contact i{
+    font-size:24px;
+    transition:0.3s ease;
+}
+
+.contact a:hover{
+    transform:translateY(-4px);
+}
+
+.contact a:hover i{
+    transform:scale(1.15);
+}
+
+/* Underline animation */
+
+.contact a::after{
+    content:'';
+
+    position:absolute;
+
+    left:0;
+    bottom:-6px;
+
+    width:0;
+    height:2px;
+
+    background:#000;
+
+    transition:0.3s ease;
+}
+
+.contact a:hover::after{
+    width:100%;
+}
+
+@media(max-width:768px){
+
+    .contact{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+
+        flex-wrap:nowrap;
+
+        gap:14px;
+
+        padding:20px 6px;
+    }
+
+    .contact a{
+        font-size:0.72rem;
+        gap:5px;
+
+        white-space:nowrap;
+    }
+
+    .contact i{
+        font-size:17px;
+    }
+
+}
+/* Animated underline */
+
+.social-links a::after{
+    content:"";
+
+    position:absolute;
+
+    left:0;
+    bottom:0;
+
+    width:0;
+    height:1px;
+
+    background:#000;
+
+    transition:width 0.3s ease;
+}
+
+/* Hover */
+
+.social-links a:hover{
+    color:#000;
+
+    transform:translateX(-5px);
+}
+
+.social-links a:hover::after{
+    width:100%;
+}
+.social-links{
+    animation: socialFade 0.8s ease forwards;
+}
+
+@keyframes socialFade{
+
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+/* =========================
+CLIENT REVIEWS
+========================= */
+
+.reviews-gallery{
+    width:min(1200px,90%);
+    margin:auto;
+
+    display:flex;
+    gap:25px;
+
+    overflow-x:auto;
+
+    padding:25px 0 35px;
+
+    scrollbar-width:none;
+}
+
+.reviews-gallery::-webkit-scrollbar{
+    display:none;
+}
+
+/* REVIEW CARD */
+
+.review-card{
+    flex:0 0 auto;
+
+    width:340px;
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:25px;
+
+    border:1px solid rgba(0,0,0,0.06);
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
+
+    transition:0.35s ease;
+
+    animation:fadeUp 0.7s ease;
+}
+
+.review-card:hover{
+    transform:translateY(-8px);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
+}
+
+/* QUOTE */
+
+.review-quote{
+    font-size:2.5rem;
+
+    line-height:1;
+
+    color:#aaa;
+
+    margin-bottom:12px;
+}
+
+/* REVIEW TEXT */
+
+.review-text{
+    font-size:1rem;
+
+    line-height:1.7;
+
+    color:#444;
+
+    min-height:110px;
+}
+
+/* CLIENT NAME */
+
+.review-name{
+    margin-top:20px;
+
+    font-size:1rem;
+
+    font-weight:600;
+
+    color:#111;
+}
+
+/* PLATFORM */
+
+.review-platform{
+    margin-top:5px;
+
+    font-size:0.8rem;
+
+    color:#888;
+}
+
+/* LOADING */
+
+.review-loading{
+    width:100%;
+
+    text-align:center;
+
+    padding:30px;
+
+    color:#777;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .reviews-gallery{
+        gap:12px;
+
+        padding:10px 0 20px;
+    }
+
+   .review-card {
+    flex: 0 0 360px;
+    height: 340px;
+
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 22px;
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+
+    transition: 0.35s ease;
+
+    position: relative;
+}
+
+.review-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.12);
+}
+    .review-quote{
+        font-size:2rem;
+    }
+
+    .review-text{
+        font-size:0.78rem;
+
+        line-height:1.5;
+
+        min-height:90px;
+    }
+
+    .review-name {
+    margin-top: auto;
+
+    font-size: 1rem;
+    font-weight: 600;
+
+    color: #111;
+}
+
+    .review-platform{
+        font-size:0.65rem;
+    }
+
+}
