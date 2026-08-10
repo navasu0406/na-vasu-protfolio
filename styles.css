@@ -3,141 +3,145 @@
 ========================= */
 
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-  scroll-behavior:smooth;
-  font-family:'Poppins',sans-serif;
+    scroll-behavior:smooth;
+    font-family:'Poppins',sans-serif;
 }
 
 body{
-  background:#ffffff;
-  color:#000;
-  overflow-x:hidden;
+    background:#ffffff;
+    color:#000;
+    overflow-x:hidden;
 }
+
 
 /* =========================
    NAVBAR
 ========================= */
 
 .nav{
-  transition:
-transform 0.4s ease,
-background 0.3s ease;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+    transition:
+        transform 0.4s ease,
+        background 0.3s ease;
 
-  padding:18px 50px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 
-  position:sticky;
-  top:0;
+    padding:18px 50px;
 
-  background:rgba(255,255,255,0.85);
-  backdrop-filter:blur(14px);
+    position:sticky;
+    top:0;
 
-  z-index:1000;
+    background:rgba(255,255,255,0.85);
+    backdrop-filter:blur(14px);
 
-  border-bottom:1px solid rgba(0,0,0,0.06);
+    z-index:1000;
 
-  box-shadow:0 4px 20px rgba(0,0,0,0.04);
+    border-bottom:1px solid rgba(0,0,0,0.06);
+
+    box-shadow:0 4px 20px rgba(0,0,0,0.04);
 }
 
 .logo{
-  width:55px;
-  transition:0.3s ease;
+    width:55px;
+    transition:0.3s ease;
 }
 
 .logo:hover{
-  transform:scale(1.08);
+    transform:scale(1.08);
 }
 
 .nav ul{
-  display:flex;
-  gap:30px;
-  list-style:none;
+    display:flex;
+    gap:30px;
+    list-style:none;
 }
 
 .nav a{
-  text-decoration:none;
-  color:#111;
-  font-weight:600;
-  font-size:1rem;
-
-  position:relative;
+    text-decoration:none;
+    color:#111;
+    font-weight:600;
+    font-size:1rem;
+    position:relative;
 }
 
 .nav a::after{
-  content:'';
+    content:'';
 
-  position:absolute;
+    position:absolute;
 
-  left:0;
-  bottom:-6px;
+    left:0;
+    bottom:-6px;
 
-  width:0%;
-  height:2px;
+    width:0%;
+    height:2px;
 
-  background:#000;
+    background:#000;
 
-  transition:0.3s ease;
+    transition:0.3s ease;
 }
 
 .nav a:hover::after{
-  width:100%;
+    width:100%;
 }
+
 
 /* =========================
    HERO SECTION
 ========================= */
 
 .name{
-  display:flex;
-  justify-content:center;
-  align-items:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-  padding-top:70px;
+    padding-top:70px;
 }
 
 .name h1{
-  font-size:5rem;
-  letter-spacing:3px;
+    font-size:5rem;
+    letter-spacing:3px;
 
-  color:#111;
+    color:#111;
 
-  animation:fadeUp 0.8s ease;
+    animation:fadeUp 0.8s ease;
 }
+
 
 /* =========================
    PROFILE
 ========================= */
 
 .pics{
-  margin-top:25px;
+    margin-top:25px;
 }
 
 .profile{
-  width:260px;
-  height:260px;
+    width:260px;
+    height:260px;
 
-  object-fit:cover;
-  border-radius:50%;
+    object-fit:cover;
+    border-radius:50%;
 
-  display:block;
-  margin:auto;
+    display:block;
+    margin:auto;
 
-  box-shadow:
-  0 15px 35px rgba(0,0,0,0.15);
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.15);
 
-  transition:0.4s ease;
+    transition:0.4s ease;
 }
 
 .profile:hover{
-  transform:scale(1.03);
+    transform:scale(1.03);
 }
+
 
 /* =========================
    HEADINGS
@@ -145,299 +149,308 @@ background 0.3s ease;
 
 .worksh1,
 .about h1{
-  width:min(1200px,90%);
-  margin:auto;
+    width:min(1200px,90%);
+    margin:auto;
 
-  margin-top:70px;
-  margin-bottom:25px;
+    margin-top:70px;
+    margin-bottom:25px;
 
-  font-size:2.5rem;
-  color:#111;
+    font-size:2.5rem;
+    color:#111;
 }
+
 
 /* =========================
    ABOUT
 ========================= */
 
 .about{
-  width:min(1200px,90%);
-  margin:auto;
+    width:min(1200px,90%);
+    margin:auto;
 }
 
 .about p{
-  font-size:1.15rem;
-  line-height:1.9;
-  color:#444;
+    font-size:1.15rem;
+    line-height:1.9;
+    color:#444;
 }
+
 
 /* =========================
    MUSIC GALLERY
 ========================= */
 
 .music-gallery{
-  width:min(1200px,90%);
-  margin:auto;
+    width:min(1200px,90%);
+    margin:auto;
 
-  display:flex;
-  gap:25px;
+    display:flex;
+    gap:25px;
 
-  overflow-x:auto;
+    overflow-x:auto;
 
-  padding:25px 0;
+    padding:25px 0;
 
-  scrollbar-width:none;
+    scrollbar-width:none;
 }
 
 .music-gallery::-webkit-scrollbar{
-  display:none;
+    display:none;
 }
+
 
 /* =========================
    MUSIC CARD
 ========================= */
 
 .music-card{
-  flex:0 0 auto;
+    flex:0 0 auto;
 
-  width:300px;
+    width:300px;
 
-  background:#fff;
+    background:#fff;
 
-  border-radius:22px;
+    border-radius:22px;
 
-  padding:18px;
+    padding:18px;
 
-  border:1px solid rgba(0,0,0,0.06);
+    border:1px solid rgba(0,0,0,0.06);
 
-  box-shadow:
-  0 8px 25px rgba(0,0,0,0.06);
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
 
-  transition:0.35s ease;
+    transition:0.35s ease;
 
-  animation:fadeUp 0.8s ease;
+    animation:fadeUp 0.8s ease;
 }
 
 .music-card:hover{
-  transform:translateY(-10px);
+    transform:translateY(-10px);
 
-  box-shadow:
-  0 18px 40px rgba(0,0,0,0.12);
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
 }
 
 .album-art{
-  width:100%;
-  height:380px;
+    width:100%;
+    height:380px;
 
-  object-fit:cover;
+    object-fit:cover;
 
-  border-radius:18px;
+    border-radius:18px;
 
-  margin-bottom:18px;
+    margin-bottom:18px;
 
-  transition:0.4s ease;
+    transition:0.4s ease;
 }
 
 .music-card:hover .album-art{
-  transform:scale(1.03);
+    transform:scale(1.03);
 }
+
 
 /* =========================
    CONTROLS
 ========================= */
 
 .controls{
-  margin-top:10px;
+    margin-top:10px;
 }
 
 .play-button{
-  width:60px;
-  height:60px;
+    width:60px;
+    height:60px;
 
-  margin:15px auto;
+    margin:15px auto;
 
-  border-radius:50%;
+    border-radius:50%;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 
-  background:#000;
+    background:#000;
 
-  cursor:pointer;
+    cursor:pointer;
 
-  transition:0.3s ease;
+    transition:0.3s ease;
 }
 
 .play-button:hover{
-  transform:scale(1.1);
+    transform:scale(1.1);
 }
 
 .play-button i{
-  font-size:28px;
-  color:#fff;
+    font-size:28px;
+    color:#fff;
 }
 
 .current-time,
 .duration{
-  font-size:0.85rem;
-  color:#666;
+    font-size:0.85rem;
+    color:#666;
 }
+
 
 /* =========================
    SEEK BAR
 ========================= */
 
 .seek-bar{
-  width:100%;
+    width:100%;
 
-  margin:12px 0;
+    margin:12px 0;
 
-  appearance:none;
+    appearance:none;
 
-  height:5px;
+    height:5px;
 
-  background:#ddd;
+    background:#ddd;
 
-  border-radius:10px;
+    border-radius:10px;
 }
 
 .seek-bar::-webkit-slider-thumb{
-  appearance:none;
+    appearance:none;
 
-  width:14px;
-  height:14px;
+    width:14px;
+    height:14px;
 
-  border-radius:50%;
+    border-radius:50%;
 
-  background:#000;
+    background:#000;
 
-  cursor:pointer;
+    cursor:pointer;
 }
+
 
 /* =========================
    INFO
 ========================= */
 
 .info h3{
-  margin-top:10px;
-  font-size:1.1rem;
-  color:#111;
+    margin-top:10px;
+    font-size:1.1rem;
+    color:#111;
 }
 
 .info p{
-  margin-top:5px;
-  color:#666;
+    margin-top:5px;
+    color:#666;
 }
+
 
 /* =========================
    WORKS SECTION
 ========================= */
 
 .works{
-  width:min(1200px,90%);
-  margin:auto;
+    width:min(1200px,90%);
+    margin:auto;
 
-  display:flex;
-  gap:25px;
+    display:flex;
+    gap:25px;
 
-  overflow-x:auto;
+    overflow-x:auto;
 
-  padding-bottom:20px;
+    padding-bottom:20px;
 
-  scrollbar-width:none;
+    scrollbar-width:none;
 }
 
 .works::-webkit-scrollbar{
-  display:none;
+    display:none;
 }
 
 .work-item{
-  flex:0 0 auto;
+    flex:0 0 auto;
 
-  width:320px;
+    width:320px;
 
-  background:#fff;
+    background:#fff;
 
-  border-radius:20px;
+    border-radius:20px;
 
-  overflow:hidden;
+    overflow:hidden;
 
-  border:1px solid rgba(0,0,0,0.06);
+    border:1px solid rgba(0,0,0,0.06);
 
-  box-shadow:
-  0 8px 25px rgba(0,0,0,0.06);
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.06);
 
-  transition:0.35s ease;
+    transition:0.35s ease;
 
-  animation:fadeUp 0.8s ease;
+    animation:fadeUp 0.8s ease;
 }
 
 .work-item:hover{
-  transform:translateY(-10px);
+    transform:translateY(-10px);
 
-  box-shadow:
-  0 18px 40px rgba(0,0,0,0.12);
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.12);
 }
 
 .work-item img{
-  width:100%;
-  display:block;
+    width:100%;
+    display:block;
 
-  transition:0.4s ease;
+    transition:0.4s ease;
 }
 
 .work-item:hover img{
-  transform:scale(1.03);
+    transform:scale(1.03);
 }
 
 .work-item p{
-  padding:15px;
-  text-align:center;
+    padding:15px;
+    text-align:center;
 
-  color:#333;
+    color:#333;
 }
+
 
 /* =========================
    CONTACT
 ========================= */
 
 .contact{
-  margin-top:80px;
+    margin-top:80px;
 
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
 
-  gap:40px;
+    gap:40px;
 
-  padding:40px 20px;
+    padding:40px 20px;
 
-  background:#fafafa;
+    background:#fafafa;
 
-  border-top:1px solid rgba(0,0,0,0.06);
+    border-top:1px solid rgba(0,0,0,0.06);
 }
 
 .contact a{
-  text-decoration:none;
-  color:#111;
+    text-decoration:none;
+    color:#111;
 
-  display:flex;
-  align-items:center;
+    display:flex;
+    align-items:center;
 
-  gap:12px;
+    gap:12px;
 
-  transition:0.3s ease;
+    transition:0.3s ease;
 }
 
 .contact a:hover{
-  transform:scale(1.05);
+    transform:scale(1.05);
 }
 
 .contact img{
-  width:50px;
-  height:50px;
+    width:50px;
+    height:50px;
 }
+
 
 /* =========================
    ANIMATION
@@ -445,199 +458,216 @@ background 0.3s ease;
 
 @keyframes fadeUp{
 
-  from{
-    opacity:0;
-    transform:translateY(40px);
-  }
+    from{
+        opacity:0;
+        transform:translateY(40px);
+    }
 
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 
 }
+
+
 /* =========================
    MOBILE RESPONSIVE
 ========================= */
 
 @media(max-width:768px){
 
-  /* NAVBAR */
+    /* NAVBAR */
 
-  .nav{
-    padding:8px 12px;
-    gap:6px;
-  }
+    .nav{
+        padding:8px 12px;
+        gap:6px;
+    }
 
-  .nav ul{
-    gap:10px;
-  }
+    .nav ul{
+        gap:10px;
+    }
 
-  .nav a{
-    font-size:0.78rem;
-  }
+    .nav a{
+        font-size:0.78rem;
+    }
 
-  .logo{
-    width:34px;
-  }
+    .logo{
+        width:34px;
+    }
 
-  /* HERO */
 
-  .name{
-    padding-top:18px;
-  }
+    /* HERO */
 
-  .name h1{
-    font-size:1.8rem;
-  }
+    .name{
+        padding-top:18px;
+    }
 
-  /* PROFILE */
+    .name h1{
+        font-size:1.8rem;
+    }
 
-  .profile{
-    width:110px;
-    height:110px;
-  }
 
-  /* SECTION HEADINGS */
+    /* PROFILE */
 
-  .worksh1,
-  .about h1{
-    font-size:1.5rem;
-    margin-top:28px;
-    margin-bottom:14px;
-  }
+    .profile{
+        width:110px;
+        height:110px;
+    }
 
-  /* ABOUT */
 
-  .about p{
-    font-size:0.88rem;
-    line-height:1.5;
-  }
+    /* SECTION HEADINGS */
 
-  /* MUSIC SECTION */
+    .worksh1,
+    .about h1{
+        font-size:1.5rem;
+        margin-top:28px;
+        margin-bottom:14px;
+    }
 
-  .music-gallery{
-    gap:12px;
-    padding:10px 0;
-  }
 
-  .music-card{
+    /* ABOUT */
 
-    width:145px;
+    .about p{
+        font-size:0.88rem;
+        line-height:1.5;
+    }
 
-    padding:8px;
 
-    border-radius:14px;
-  }
+    /* MUSIC SECTION */
 
-  .album-art{
+    .music-gallery{
+        gap:12px;
+        padding:10px 0;
+    }
 
-    height:135px;
+    .music-card{
+        width:145px;
+        padding:8px;
+        border-radius:14px;
+    }
 
-    border-radius:10px;
+    .album-art{
+        height:135px;
+        border-radius:10px;
+        margin-bottom:8px;
+    }
 
-    margin-bottom:8px;
-  }
 
-  /* PLAY BUTTON */
+    /* PLAY BUTTON */
 
-  .play-button{
+    .play-button{
+        width:34px;
+        height:34px;
 
-    width:34px;
-    height:34px;
+        margin:6px auto;
+    }
 
-    margin:6px auto;
-  }
+    .play-button i{
+        font-size:15px;
+    }
 
-  .play-button i{
-    font-size:15px;
-  }
 
-  /* SEEK BAR */
+    /* SEEK BAR */
 
-  .seek-bar{
-    margin:5px 0;
-    height:3px;
-  }
+    .seek-bar{
+        margin:5px 0;
+        height:3px;
+    }
 
-  .seek-bar::-webkit-slider-thumb{
-    width:10px;
-    height:10px;
-  }
+    .seek-bar::-webkit-slider-thumb{
+        width:10px;
+        height:10px;
+    }
 
-  /* TIME */
 
-  .current-time,
-  .duration{
-    font-size:0.65rem;
-  }
+    /* TIME */
 
-  /* TEXT */
+    .current-time,
+    .duration{
+        font-size:0.65rem;
+    }
 
-  .info h3{
-    font-size:0.82rem;
-    margin-top:4px;
-  }
 
-  .info p{
-    font-size:0.68rem;
-    margin-top:2px;
-  }
+    /* TEXT */
 
-  /* WORKS */
+    .info h3{
+        font-size:0.82rem;
+        margin-top:4px;
+    }
 
-  .work-item{
-    width:180px;
-  }
+    .info p{
+        font-size:0.68rem;
+        margin-top:2px;
+    }
 
-  .work-item p{
-    font-size:0.75rem;
-    padding:10px;
-  }
 
-  /* CONTACT */
+    /* WORKS */
 
-  .contact{
-    gap:14px;
-    padding:16px 8px;
-  }
+    .work-item{
+        width:180px;
+    }
 
-  .contact img{
-    width:32px;
-    height:32px;
-  }
+    .work-item p{
+        font-size:0.75rem;
+        padding:10px;
+    }
+
+
+    /* CONTACT */
+
+    .contact{
+        gap:14px;
+        padding:16px 8px;
+    }
+
+    .contact img{
+        width:32px;
+        height:32px;
+    }
 
 }
 
-/* EXTRA SMALL PHONES */
+
+/* =========================
+   EXTRA SMALL PHONES
+========================= */
 
 @media(max-width:480px){
 
-  .music-card{
-    width:135px;
-  }
+    .music-card{
+        width:135px;
+    }
 
-  .album-art{
-    height:125px;
-  }
-
-}
-.music-card.active{
-
-  transform:translateY(-10px);
-
-  box-shadow:
-  0 20px 45px rgba(0,0,0,0.16);
-
-  border:1px solid rgba(0,0,0,0.15);
+    .album-art{
+        height:125px;
+    }
 
 }
+
+
 /* =========================
-SOCIAL LINKS
+   ACTIVE MUSIC CARD
 ========================= */
 
+.music-card.active{
+
+    transform:translateY(-10px);
+
+    box-shadow:
+        0 20px 45px rgba(0,0,0,0.16);
+
+    border:1px solid rgba(0,0,0,0.15);
+}
+
+
 /* =========================
-CONTACT
+   SOCIAL LINKS
+========================= */
+
+
+/* =========================
+   CONTACT
 ========================= */
 
 .contact{
@@ -687,7 +717,8 @@ CONTACT
     transform:scale(1.15);
 }
 
-/* Underline animation */
+
+/* UNDERLINE ANIMATION */
 
 .contact a::after{
     content:'';
@@ -708,6 +739,7 @@ CONTACT
 .contact a:hover::after{
     width:100%;
 }
+
 
 @media(max-width:768px){
 
@@ -735,7 +767,11 @@ CONTACT
     }
 
 }
-/* Animated underline */
+
+
+/* =========================
+   SOCIAL LINKS
+========================= */
 
 .social-links a::after{
     content:"";
@@ -753,8 +789,6 @@ CONTACT
     transition:width 0.3s ease;
 }
 
-/* Hover */
-
 .social-links a:hover{
     color:#000;
 
@@ -764,8 +798,9 @@ CONTACT
 .social-links a:hover::after{
     width:100%;
 }
+
 .social-links{
-    animation: socialFade 0.8s ease forwards;
+    animation:socialFade 0.8s ease forwards;
 }
 
 @keyframes socialFade{
@@ -781,8 +816,10 @@ CONTACT
     }
 
 }
+
+
 /* =========================
-CLIENT REVIEWS
+   CLIENT REVIEWS
 ========================= */
 
 .reviews-gallery{
@@ -803,7 +840,10 @@ CLIENT REVIEWS
     display:none;
 }
 
-/* REVIEW CARD */
+
+/* =========================
+   REVIEW CARD
+========================= */
 
 .review-card{
     flex:0 0 auto;
@@ -824,6 +864,9 @@ CLIENT REVIEWS
     transition:0.35s ease;
 
     animation:fadeUp 0.7s ease;
+
+    display:flex;
+    flex-direction:column;
 }
 
 .review-card:hover{
@@ -833,7 +876,10 @@ CLIENT REVIEWS
         0 18px 40px rgba(0,0,0,0.12);
 }
 
-/* QUOTE */
+
+/* =========================
+   QUOTE
+========================= */
 
 .review-quote{
     font-size:2.5rem;
@@ -845,7 +891,10 @@ CLIENT REVIEWS
     margin-bottom:12px;
 }
 
-/* REVIEW TEXT */
+
+/* =========================
+   REVIEW TEXT
+========================= */
 
 .review-text{
     font-size:1rem;
@@ -857,10 +906,13 @@ CLIENT REVIEWS
     min-height:110px;
 }
 
-/* CLIENT NAME */
+
+/* =========================
+   REVIEW NAME
+========================= */
 
 .review-name{
-    margin-top:20px;
+    margin-top:auto;
 
     font-size:1rem;
 
@@ -869,7 +921,10 @@ CLIENT REVIEWS
     color:#111;
 }
 
-/* PLATFORM */
+
+/* =========================
+   REVIEW PLATFORM
+========================= */
 
 .review-platform{
     margin-top:5px;
@@ -879,7 +934,10 @@ CLIENT REVIEWS
     color:#888;
 }
 
-/* LOADING */
+
+/* =========================
+   LOADING
+========================= */
 
 .review-loading{
     width:100%;
@@ -891,7 +949,10 @@ CLIENT REVIEWS
     color:#777;
 }
 
-/* MOBILE */
+
+/* =========================
+   MOBILE REVIEWS
+========================= */
 
 @media(max-width:768px){
 
@@ -901,55 +962,77 @@ CLIENT REVIEWS
         padding:10px 0 20px;
     }
 
-   .review-card {
-    flex: 0 0 360px;
-    height: 340px;
+    .review-card{
+        flex:0 0 280px;
 
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-    border-radius: 22px;
+        width:280px;
 
-    padding: 28px 20px;
+        height:220px;
 
-    display: flex;
-    flex-direction: column;
+        padding:18px 16px;
 
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.06);
+        border-radius:18px;
 
-    transition: 0.35s ease;
+        display:flex;
+        flex-direction:column;
 
-    position: relative;
-}
+        box-shadow:
+            0 6px 20px rgba(0,0,0,0.06);
 
-.review-card:hover {
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.12);
-}
-    .review-quote{
-        font-size:2rem;
+        position:relative;
     }
+
+    .review-card:hover{
+        transform:translateY(-5px);
+
+        box-shadow:
+            0 12px 30px rgba(0,0,0,0.10);
+    }
+
+
+    /* QUOTE */
+
+    .review-quote{
+        font-size:1.8rem;
+
+        line-height:1;
+
+        margin-bottom:8px;
+    }
+
+
+    /* TEXT */
 
     .review-text{
         font-size:0.78rem;
 
         line-height:1.5;
 
-        min-height:90px;
+        min-height:0;
+
+        overflow:hidden;
     }
 
-    .review-name {
-    margin-top: auto;
 
-    font-size: 1rem;
-    font-weight: 600;
+    /* NAME */
 
-    color: #111;
-}
+    .review-name{
+        margin-top:auto;
+
+        font-size:0.85rem;
+
+        font-weight:600;
+    }
+
+
+    /* PLATFORM */
 
     .review-platform{
+        margin-top:3px;
+
         font-size:0.65rem;
+
+        color:#888;
     }
 
 }
